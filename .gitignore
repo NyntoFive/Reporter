@@ -1,0 +1,7 @@
+src/
+venv
+__pycache__
+*.pyc
+nginx.conf
+.ipynb_checkpoint
+static

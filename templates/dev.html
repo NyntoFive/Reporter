@@ -1,0 +1,11 @@
+{% extends 'base.html' %}{% load static %}{% block title %}DEV{% endblock %}
+{% block header %}{% endblock %}
+{% block content %}
+<div class="row row-cols-4 gy-4">
+  {% for item in data %}
+  <div class="col">
+    {% include 'blocks/card.html' %}
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}
