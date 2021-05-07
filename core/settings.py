@@ -39,11 +39,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # local
-    'customers',
-    'products',
-    'profiles',
-    'reports',
-    'sales',
+    # 'customers',
+    # 'reports',
+    # 'products',
+    # 'sales',
+    # 'profiles',
     'ckk',
 
     # 3rd Party
@@ -51,7 +51,7 @@ INSTALLED_APPS = [
     'django_extensions',
 ]
 
-CRISPY_TEMPLATE_PACK = 'bootstrap4'
+CRISPY_TEMPLATE_PACK = 'bootstrap5'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

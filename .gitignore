@@ -4,4 +4,9 @@ __pycache__
 *.pyc
 nginx.conf
 .ipynb_checkpoint
+_dev/
+static/src/
+static/xlsx/
+.env
+.idea
 static

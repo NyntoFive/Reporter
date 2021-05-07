@@ -79,13 +79,13 @@ class CKKItem(models.Model):
         return json.loads(self.description)
 
 class CKKImage(models.Model):
-    item = models.ForeignKey(CKKItem, on_delete=models.CASCADE, null=True)
+    item = models.ForeignKey(CKKItem, on_delete=models.CASCADE)
     source = models.URLField(blank=True, max_length=255)
     position = models.PositiveIntegerField(blank=True)
-    fname = models.CharField(max_length=100, default="placeholder.jpg")
+    fname = models.CharField(max_length=200)
+    
     local = models.ImageField(upload_to="images/")
     
     def __str__(self):
         return self.fname
-
     
