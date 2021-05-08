@@ -10,3 +10,4 @@ static/xlsx/
 .env
 .idea
 static
+.vscode
