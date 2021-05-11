@@ -24,8 +24,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('login/', login_view, name='login'),
     path('logout/', logout_view, name='logout'),
-    path('', dev_view, name="home"),
-    # path('', include('ckk.urls'))
+    # path('', dev_view, name="home"),
+    path('', include('ckk.urls'))
 
     # path('', include('sales.urls', namespace='sales')),
     # path('reports/', include('reports.urls', namespace='reports')),

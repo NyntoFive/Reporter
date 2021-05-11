@@ -1,0 +1,40 @@
+from django import forms
+from django.utils import send_email
+
+
+from . import errors
+
+class AccountActionForm(forms.Form):
+    comment = forms.CharField(
+        required=False,
+        widget=forms.TextArea
+    )
+    send_email = forms.BooleanField(required=False)
+
+    @property
+    def email_body_template(self):
+        raise NotImplementedError()
+    
+    def form_action(self, account, user):
+        raise NotImplementedError()
+    
+    def save(self, account, user):
+        try:
+            account, action = self.form_action(account, user)
+        except:
+            error_message = str(self.e)
+            self.add_error(None, error_message)
+            raise
+
+        if self.cleaned_data.get('send_email', False):
+            send_email(
+                to=[account.user.email],
+                subject_template=self.email_subject_template,
+                body_template=self.email_body_template,
+                context={
+                    "account": account,
+                    "action": action,
+                }
+            )
+    
+        return account, action

@@ -10,10 +10,9 @@ class KKListView(ListView):
 
 def kk_list(request):
     products = CKKItem.objects.all()
-    product_list = []
+    images=[]
+    for i, d in enumerate(products):
+        item = {products[i].sku: [img for img in products[i].all_images]}
+        images.append(item)
 
-    for product in products:
-        images = product.image_set.all()
-
-        if images:
-            product_
+    return render(request, 'ckk/detail.html', {"images": images})
