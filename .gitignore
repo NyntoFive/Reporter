@@ -11,3 +11,6 @@ static/xlsx/
 .idea
 static
 .vscode
+node_modules
+frontend
+dockerize
