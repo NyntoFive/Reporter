@@ -77,7 +77,7 @@ class CKKItem(models.Model):
 
     def get_description(self):
         return json.loads(self.description)
-
+    
 class CKKImage(models.Model):
     item = models.ForeignKey(CKKItem, on_delete=models.CASCADE)
     source = models.URLField(blank=True, max_length=255)

@@ -39,11 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # local
-    # 'customers',
-    # 'reports',
     # 'products',
-    # 'sales',
     # 'profiles',
+    'ebtf',
     'ckk',
 
     # 3rd Party
