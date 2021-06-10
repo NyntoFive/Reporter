@@ -1,5 +1,4 @@
-import json, fnmatch
-
+import json
 from django.db import models
 # from .utils import get_filtered_image
 from PIL import Image
@@ -15,6 +14,10 @@ ACTION_CHOICES = (
     ('BINARY', 'binary'),
     ('INVERT', 'invert'),
 )
+
+class CKKImageManager(models.Manager):
+    def get_all_images(self):
+        return super().get_queryset().filter(item=)
 
 class Upload(models.Model):
     image = models.ImageField(upload_to='images')
@@ -77,6 +80,9 @@ class CKKItem(models.Model):
 
     def get_description(self):
         return json.loads(self.description)
+    
+    objects = CKKImageManager(models.Manager)
+
     
 class CKKImage(models.Model):
     item = models.ForeignKey(CKKItem, on_delete=models.CASCADE)

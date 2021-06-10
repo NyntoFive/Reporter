@@ -1,14 +1,21 @@
 <div class="card border border-dark shadow h-100">
-  <div class="bg-image mx-auto mt-2 hover-overlay ripple" data-mdb-ripple-color="light">
-    <img src="static/images/ex9.jpg" alt="{{ item.sku }}" class="img-fluid">
-    <a href="#!">
-      <div class="mask" style="background-color:rgba(251,251,251,0.15)"></div>
+  <div
+    class="bg-image mx-auto mt-2 hover-overlay ripple"
+    data-mdb-ripple-color="light"
+  >
+    <img src="static/images/ex9.jpg" alt="{{ item.sku }}" class="img-fluid" />
+    <a href="{{ item.link }}">
+      <div
+        class="mask"
+        style="background-color: rgba(251, 251, 251, 0.15)"
+      ></div>
     </a>
   </div>
   <div class="card-body">
     <h5>{{ item.sku }}</h5>
+
     <p>{{ item.description|truncatewords:"100" }}</p>
-    
+
     <div class="d-flex justify-content-end">
       <button type="button" class="btn btn-primary mx-2">Button</button>
       <button type="button" class="btn btn-success mx-2">Buy Now</button>

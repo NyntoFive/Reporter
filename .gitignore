@@ -1,16 +1,36 @@
+# Bootstrap source files
 src/
+static/src/
+
+# Python Env
 venv
 __pycache__
 *.pyc
+.env
+
+# My Junk
 nginx.conf
 .ipynb_checkpoint
 _dev/
-static/src/
 static/xlsx/
-.env
-.idea
-static
-.vscode
-node_modules
-frontend
 dockerize
+DEV
+static
+
+# Pycharm / VSCode
+.idea
+.vscode
+
+# NPM / Frontend
+frontend
+node_modules
+
+# Secrets
+secrets.json
+secrets.yml
+
+# Vagrant
+.vagrant
+*.retrytext_from_lens.json
+deployment/
+text_from_lens
